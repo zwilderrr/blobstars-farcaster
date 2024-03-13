@@ -1,46 +1,39 @@
-import { getFrameMetadata } from '@coinbase/onchainkit/frame';
+import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time',
-    },
-    {
       action: 'tx',
-      label: 'Send Base Sepolia',
-      target: `${NEXT_PUBLIC_URL}/api/tx`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
+      label: 'Mint Soulbound NFT',
+      target: `${NEXT_PUBLIC_URL}/api/frames-of-the-future`,
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: `${NEXT_PUBLIC_URL}/base-heart-farcaster_1080_9mb.gif`,
     aspectRatio: '1:1',
   },
-  input: {
-    text: 'Tell me a story',
-  },
-  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/future-after-tx`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
-  description: 'LFG',
+  title: 'Frames of the Future',
+  description: 'Base celebrates the launch of transactions in Farcaster',
   openGraph: {
-    title: 'zizzamia.xyz',
-    description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    title: 'Frames of the Future',
+    description: 'Base celebrates the launch of transactions in Farcaster',
+    images: [`${NEXT_PUBLIC_URL}/base-heart-farcaster_1080_9mb.gif`],
   },
   other: {
     ...frameMetadata,
   },
 };
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>Base 💙 Farcaster</h1>
     </>
   );
 }
