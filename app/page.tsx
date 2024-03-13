@@ -6,24 +6,24 @@ const frameMetadata = getFrameMetadata({
   buttons: [
     {
       action: 'tx',
-      label: 'Mint Soulbound NFT',
-      target: `${NEXT_PUBLIC_URL}/api/frames-of-the-future`,
+      label: 'Mint BlobStarNFT',
+      target: `${NEXT_PUBLIC_URL}/api/mint`,
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/base-heart-farcaster_1080_9mb.gif`,
+    src: `${NEXT_PUBLIC_URL}/blobstar.png`,
     aspectRatio: '1:1',
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/future-after-tx`,
 });
 
 export const metadata: Metadata = {
-  title: 'Frames of the Future',
-  description: 'Base celebrates the launch of transactions in Farcaster',
+  title: 'BlobStarsNFT',
+  description: 'Mint a BlobStar now to show your support for good people doing good things',
   openGraph: {
-    title: 'Frames of the Future',
-    description: 'Base celebrates the launch of transactions in Farcaster',
-    images: [`${NEXT_PUBLIC_URL}/base-heart-farcaster_1080_9mb.gif`],
+    title: 'BlobStarsNFT',
+    description: 'Mint a BlobStar now to show your support for good people doing good things',
+    images: [`${NEXT_PUBLIC_URL}/blobstar.png`],
   },
   other: {
     ...frameMetadata,
