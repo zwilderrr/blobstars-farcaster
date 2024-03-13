@@ -31,7 +31,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
     params: {
       abi: [],
       data,
-      to: mintContractData.address as `0x${string}`,
+      to: '0x09ce1abaf8a4250337d26982805aa6527c4e9540',
       value: '3000000000000000', // 0.003 ETH
     },
   };
