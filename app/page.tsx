@@ -11,7 +11,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/blobstar.png`,
+    src: `${NEXT_PUBLIC_URL}/blobstar-reel.gif`,
     aspectRatio: '1:1',
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/future-after-tx`,
