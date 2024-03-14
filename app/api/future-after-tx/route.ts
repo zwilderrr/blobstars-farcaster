@@ -16,6 +16,11 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         {
           label: 'Thanks for minting!',
         },
+        {
+          label: 'View the collection',
+          target: 'https://base.blockscout.com/token/0x09Ce1ABaf8A4250337d26982805aA6527c4e9540',
+          action: 'link',
+        },
       ],
       image: {
         src: `${NEXT_PUBLIC_URL}/blobstar.png`,
