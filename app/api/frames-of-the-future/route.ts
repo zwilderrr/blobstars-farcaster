@@ -11,7 +11,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
 
   console.log('req', req);
   const body: FrameRequest = await req.json();
-  const { isValid } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
+  const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
   if (!isValid) {
     console.error('Message not valid');
@@ -19,7 +19,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
   }
 
   console.log('body', body);
-
+  const address = message.interactor.verified_accounts[0];
   const data = encodeFunctionData({
     abi: mintContractData.abi,
     functionName: 'mint',
