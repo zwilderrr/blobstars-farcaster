@@ -1,12 +1,12 @@
 import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from './config';
+import { NEXT_PUBLIC_URL } from '../config';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
       action: 'tx',
-      label: 'Mint BlobStarNFT',
+      label: 'Mint BlobStarNFT mint',
       target: `${NEXT_PUBLIC_URL}/api/mint`,
     },
   ],
