@@ -5,35 +5,45 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      action: 'tx',
-      label: 'Mint BlobStarNFT',
-      target: `${NEXT_PUBLIC_URL}/api/mint`,
+      label: 'Road',
+    },
+    {
+      label: 'Woods',
+    },
+    {
+      label: 'Cave',
+    },
+    {
+      action: 'link',
+      label: 'TODO',
+      target: 'https://www.google.com',
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/blobstar-reel.gif`,
+    src: `${NEXT_PUBLIC_URL}/frame-1-forest.webp`,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/api/future-after-tx`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/frame?frame=start`,
 });
 
 export const metadata: Metadata = {
-  title: 'BlobStarsNFT',
-  description: 'Mint a BlobStar now to show your support for good people doing good things',
+  title: 'HyperFrames!',
+  description: 'Time is a flat circle.',
   openGraph: {
-    title: 'BlobStarsNFT',
-    description: 'Mint a BlobStar now to show your support for good people doing good things',
-    images: [`${NEXT_PUBLIC_URL}/blobstar.png`],
+    title: 'HyperFrames!',
+    description: 'Time is a flat circle.',
+    images: [`${NEXT_PUBLIC_URL}/frame-1-forest.webp`],
   },
   other: {
     ...frameMetadata,
   },
 };
 
-export default async function Page() {
+export default function Page() {
   return (
     <>
-      <h1>Base 💙 Farcaster</h1>
+      <h1>HyperFrames!</h1>
+      <a href="https://docs.base.org/building-with-base/guides/hyperframes">Click here to learn how to make this!</a>
     </>
   );
 }

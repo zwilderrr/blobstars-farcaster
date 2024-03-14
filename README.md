@@ -1,22 +1,8 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Zizzamia/a-frame-in-100-lines/blob/main/public/park-4.png">
-    <img alt="OnchainKit logo vibes" src="https://github.com/Zizzamia/a-frame-in-100-lines/blob/main/public/park-4.png" width="auto">
-  </picture>
-</p>
-
 # A Frame in 100 lines (or less)
 
 Farcaster Frames in less than 100 lines, and ready to be deployed to Vercel.
 
-To test a **deployed** Frame, use: https://warpcast.com/~/developers/frames.
-
-To test a **localhost** Frame, use: [Framegear](https://onchainkit.xyz/frame/framegear).
-A simple tool that allows you to run and test your frames locally:
-
-- without publishing
-- without casting
-- without spending warps
+To test a Frame, use: https://warpcast.com/~/developers/frames.
 
 And let us know what you build by either mentioning @zizzamia on [Warpcast](https://warpcast.com/zizzamia) or [X](https://twitter.com/Zizzamia).
 
@@ -41,7 +27,7 @@ Have fun! ⛵️
 ### `app/page.tsx`
 
 ```tsx
-import { getFrameMetadata } from '@coinbase/onchainkit/frame';
+import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from './config';
 
@@ -118,7 +104,7 @@ export const NEXT_PUBLIC_URL = 'https://zizzamia.xyz';
 ### `app/api/frame/route.ts`
 
 ```ts
-import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
+import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit';
 import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../config';
 
@@ -172,21 +158,43 @@ export const dynamic = 'force-dynamic';
 
 - [Official Farcaster Frames documentation](https://docs.farcaster.xyz/learn/what-is-farcaster/frames)
 - [Official Farcaster Frame specification](https://docs.farcaster.xyz/reference/frames/spec)
-- [OnchainKit documentation](https://onchainkit.xyz)
+- [OnchainKit documentation](https://github.com/coinbase/onchainkit)
 
 <br />
 
-## Community ☁️ 🌁 ☁️
+## The Team and Our Community ☁️ 🌁 ☁️
 
-Check out the following places for more OnchainKit-related content:
+A Farcaster Frame in 100 Lines is all about community. If you have any questions, feel free to reach out to the core maintainers on Twitter or through Farcaster.
 
-- Follow @zizzamia ([X](https://twitter.com/zizzamia), [Farcaster](https://warpcast.com/zizzamia)) for project updates
-- Join the discussions on our [OnchainKit warpcast channel](https://warpcast.com/~/channel/onchainkit)
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <a href="https://twitter.com/Zizzamia">
+          <img width="80" height="80" src="https://github.com/zizzamia.png?s=100">
+        </a>
+        <br />
+        <a href="https://twitter.com/Zizzamia">Leonardo Zizzamia</a>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://warpcast.com/cnasc">
+          <img width="80" height="80" src="https://github.com/cnasc.png?s=100">
+        </a>
+        <br />
+        <a href="https://warpcast.com/cnasc">Chris Nascone</a>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://twitter.com/0xr0b_eth">
+          <img width="80" height="80" src="https://github.com/robpolak.png?s=100">
+        </a>
+        <br />
+        <a href="https://twitter.com/0xr0b_eth">Rob Polak</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Authors
-
-- [@zizzamia](https://github.com/zizzamia.png) ([X](https://twitter.com/Zizzamia))
-- [@cnasc](https://github.com/cnasc.png) ([warpcast](https://warpcast.com/cnasc))
+<br />
 
 ## License
 
