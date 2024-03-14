@@ -32,7 +32,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
       abi: [],
       data,
       to: mintContractData.address as `0x${string}`,
-      value: '3000000000000000n', // 0.003 ETH
+      value: parseGwei('3000000').toString(), // 0.003 ETH
     },
   };
   console.log('txData', txData);
