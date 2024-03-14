@@ -1,6 +1,6 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { encodeFunctionData, parseGwei } from 'viem';
+import { encodeFunctionData, parseEther, parseGwei } from 'viem';
 import { base } from 'viem/chains';
 import type { FrameTransactionResponse } from '@coinbase/onchainkit/frame';
 
@@ -31,8 +31,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
     params: {
       abi: [],
       data,
-      to: '0x09ce1abaf8a4250337d26982805aa6527c4e9540',
-      value: '3000000000000000', // 0.003 ETH
+      to: mintContractData.address as `0x${string}`,
+      value: parseEther('.003').toString(), // 0.003 ETH
     },
   };
   console.log('txData', txData);
