@@ -19,10 +19,10 @@ const frameMetadata = getFrameMetadata({
 
 export const metadata: Metadata = {
   title: 'BlobStarsNFT',
-  description: 'Mint a BlobStar now to show your support for good people doing good things',
+  description: 'Mint a BlobStar now to show your support for good people doing good things.',
   openGraph: {
     title: 'BlobStarsNFT',
-    description: 'Mint a BlobStar now to show your support for good people doing good things',
+    description: 'Mint a BlobStar now to show your support for good people doing good things.',
     images: [`${NEXT_PUBLIC_URL}/blobstars-reel.gif`],
   },
   other: {
