@@ -23,6 +23,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
   const data = encodeFunctionData({
     abi: mintContractData.abi,
     functionName: 'mint',
+    args: [address, 1],
   });
 
   const txData: FrameTransactionResponse = {
